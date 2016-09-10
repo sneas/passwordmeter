@@ -1,0 +1,38 @@
+{
+  "name": "passwordmeter",
+  "version": "0.0.1",
+  "description": "Password sescurity checker function based on http://www.passwordmeter.com/",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prebuild": "rimraf dist",
+    "build": "babel --out-dir dist src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sneas/passwordmeter.git"
+  },
+  "keywords": [
+    "passwordmeter",
+    "password",
+    "strength"
+  ],
+  "author": "Dima Snisarenko <snisarenkodima@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sneas/passwordmeter/issues"
+  },
+  "homepage": "https://github.com/sneas/passwordmeter",
+  "devDependencies": {
+    "babel-cli": "6.14.0",
+    "babel-preset-es2015": "6.14.0",
+    "babel-preset-stage-2": "6.13.0",
+    "rimraf": "2.5.4"
+  },
+  "babel": {
+    "presets": [
+      "es2015",
+      "stage-2"
+    ]
+  }
+}
