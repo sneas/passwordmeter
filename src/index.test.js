@@ -7,8 +7,20 @@ describe('password-meter', function() {
             expect(passwordMeter.checkPass('')).to.be.equal(-1);
         });
 
-        it('should return 0 on repeated characters', function() {
-            expect(passwordMeter.checkPass('111111111')).to.be.equal(0);
+        it('should return 4 on sequential number', function() {
+            expect(passwordMeter.checkPass('123')).to.be.equal(4);
+        });
+
+        it('check for Consecutive Uppercase Letters exist ', function() {
+            expect(passwordMeter.checkPass('AA')).to.be.equal(0);
+        });
+
+        it('should return 0 on sequential alpha number exists', function() {
+            expect(passwordMeter.checkPass('abcdefghi')).to.be.equal(0);
+        });
+
+        it('should return 29 on sequential symbols', function() {
+            expect(passwordMeter.checkPass('@#$')).to.be.equal(29);
         });
 
         it('should return less than 100 when some of criteria does not meet', function() {
