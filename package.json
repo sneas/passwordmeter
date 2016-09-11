@@ -1,6 +1,6 @@
 {
   "name": "passwordmeter",
-  "version": "1.0.0",
+  "version": "0.0.0-semantically-released",
   "description": "Password sescurity checker function based on http://www.passwordmeter.com/",
   "main": "dist/index.js",
   "scripts": {
@@ -11,11 +11,12 @@
     "build": "npm-run-all --parallel build:*",
     "build:main": "babel --out-dir dist --ignore *.test.js src",
     "build:umd": "webpack --output-filename index.umd.js",
-    "build:umd.min": "webpack --output-filename index.umd.min.js -p"
+    "build:umd.min": "webpack --output-filename index.umd.min.js -p",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sneas/passwordmeter.git"
+    "url": "https://github.com/sneas/passwordmeter.git"
   },
   "keywords": [
     "passwordmeter",
@@ -42,7 +43,8 @@
     "mocha": "3.0.2",
     "npm-run-all": "3.1.0",
     "rimraf": "2.5.4",
-    "webpack": "1.13.2"
+    "webpack": "1.13.2",
+    "semantic-release": "^4.3.5"
   },
   "config": {
     "commitizen": {
