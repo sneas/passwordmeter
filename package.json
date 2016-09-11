@@ -1,6 +1,6 @@
 {
   "name": "passwordmeter",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Password sescurity checker function based on http://www.passwordmeter.com/",
   "main": "dist/index.js",
   "scripts": {
