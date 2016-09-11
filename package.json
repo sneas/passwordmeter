@@ -15,7 +15,7 @@
     "build:main": "babel --out-dir dist --ignore *.test.js src",
     "build:umd": "webpack --output-filename index.umd.js",
     "build:umd.min": "webpack --output-filename index.umd.min.js -p",
-    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
+    "semantic-release": "semantic-release-cli pre && npm publish && semantic-release-cli post"
   },
   "repository": {
     "type": "git",
@@ -49,7 +49,7 @@
     "npm-run-all": "3.1.0",
     "nyc": "8.1.0",
     "rimraf": "2.5.4",
-    "semantic-release": "^4.3.5",
+    "semantic-release-cli": "1.4.1",
     "webpack": "1.13.2"
   },
   "config": {
