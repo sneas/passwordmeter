@@ -7,7 +7,7 @@
     "check-coverage": "nyc check-coverage --statements 99 --branches 99 --functions 99 --lines 99",
     "report-coverage": "cat ./coverage/lcov.info | codecov",
     "watch:test": "npm t -- --watch",
-    "cover": "nyc --reporter=lcov --reporter=text-lcov npm t",
+    "cover": "nyc --reporter=lcov npm t",
     "test": "mocha src/index.test.js --compilers js:babel-register",
     "prebuild": "rimraf dist",
     "build": "npm-run-all --parallel build:*",
