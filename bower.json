@@ -11,7 +11,7 @@
     "password",
     "strength"
   ],
-  "homepage": "",
+  "homepage": "https://github.com/sneas/passwordmeter",
   "ignore": [
     "**/.*",
     "node_modules",
