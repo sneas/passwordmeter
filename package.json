@@ -1,6 +1,6 @@
 {
   "name": "passwordmeter",
-  "description": "Password sescurity checker function based on http://www.passwordmeter.com/",
+  "description": "Password security checker function based on http://www.passwordmeter.com/",
   "main": "dist/index.js",
   "scripts": {
     "commit": "git-cz",
