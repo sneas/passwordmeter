@@ -1,0 +1,22 @@
+{
+  "name": "passwordmeter",
+  "description": "Password security checker function based on http://www.passwordmeter.com/",
+  "main": "dist/index.umd.js",
+  "authors": [
+    "Dima Snisarenko <snisarenkodima@gmail.com>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "passwordmeter",
+    "password",
+    "strength"
+  ],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
