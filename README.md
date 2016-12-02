@@ -9,7 +9,7 @@
 
 Password security checker function based on http://www.passwordmeter.com/
 
-Unobtrusive and tested.
+Unobtrusive and unit-tested.
 
 # Installation
 

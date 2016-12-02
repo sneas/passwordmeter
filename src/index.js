@@ -1,26 +1,40 @@
-//Checks password for strength and returns score from 0 to 100 and -1 for empty password
+function reverse(string) {
+    var newstring = "";
+    for (var s=0; s < string.length; s++) {
+        newstring = string.charAt(s) + newstring;
+    }
+    return newstring;
+}
+
 module.exports = {
+    /**
+     * Check password's strength
+     *
+     * @param {String} password
+     * @param {Number} minLength - minimum password length
+     * @returns {Number} - from 0 to 100 and -1 for an empty password
+     */
     checkPass: function (password, minLength = 8) {
         if (!password) {
             return -1;
         }
 
-        // Simultaneous variable declaration and value assignment aren't supported in IE apparently
-        // so I'm forced to assign the same value individually per var to support a crappy browser *sigh*
+        // The code below almost identical to the `chkPass(pwd)` function from http://www.passwordmeter.com/js/pwdmeter.js
+
         let nAlphaUC=0, nAlphaLC=0, nNumber=0, nSymbol=0, nMidChar=0, nUnqChar=0, nRepChar=0, nRepInc=0, nConsecAlphaUC=0, nConsecAlphaLC=0, nConsecNumber=0, nConsecSymbol=0, nConsecCharType=0, nSeqAlpha=0, nSeqNumber=0, nSeqSymbol=0, nSeqChar=0, nReqChar=0;
-        let nMultMidChar=2, nMultConsecAlphaUC=2, nMultConsecAlphaLC=2, nMultConsecNumber=2;
-        let nMultSeqAlpha=3, nMultSeqNumber=3, nMultSeqSymbol=3;
-        let nMultLength=4, nMultNumber=4;
-        let nMultSymbol=6;
+        const nMultMidChar=2, nMultConsecAlphaUC=2, nMultConsecAlphaLC=2, nMultConsecNumber=2;
+        const nMultSeqAlpha=3, nMultSeqNumber=3, nMultSeqSymbol=3;
+        const nMultLength=4, nMultNumber=4;
+        const nMultSymbol=6;
         let nTmpAlphaUC="", nTmpAlphaLC="", nTmpNumber="", nTmpSymbol="";
-        let sAlphas = "abcdefghijklmnopqrstuvwxyz";
-        let sNumerics = "01234567890";
-        let sSymbols = ")!@#$%^&*()";
+        const sAlphas = "abcdefghijklmnopqrstuvwxyz";
+        const sNumerics = "01234567890";
+        const sSymbols = ")!@#$%^&*()";
 
         let nScore = parseInt(password.length * nMultLength);
-        let nLength = password.length;
-        let arrPwd = password.replace(/\s+/g,"").split(/\s*/);
-        let arrPwdLen = arrPwd.length;
+        const nLength = password.length;
+        const arrPwd = password.replace(/\s+/g,"").split(/\s*/);
+        const arrPwdLen = arrPwd.length;
 
         /* Loop through password to check for Symbol, Numeric, Lowercase and Uppercase pattern matches */
         for (var a=0; a < arrPwdLen; a++) {
@@ -158,13 +172,5 @@ module.exports = {
         if (nScore > 100) { nScore = 100; } else if (nScore < 0) { nScore = 0; }
 
         return nScore;
-
-        function reverse(string) {
-            var newstring = "";
-            for (var s=0; s < string.length; s++) {
-                newstring = string.charAt(s) + newstring;
-            }
-            return newstring;
-        }
     }
 };
