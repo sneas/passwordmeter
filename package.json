@@ -14,7 +14,7 @@
     "build:main": "babel --out-dir dist --ignore *.test.js src",
     "build:umd": "webpack --output-filename index.umd.js",
     "build:umd.min": "webpack --output-filename index.umd.min.js -p",
-    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
+    "semantic-release": "semantic-release pre && npm publish && publish-latest && semantic-release post"
   },
   "repository": {
     "type": "git",
@@ -24,6 +24,10 @@
     "passwordmeter",
     "password",
     "strength"
+  ],
+  "files": [
+    "dist",
+    "README.md"
   ],
   "author": "Dima Snisarenko <snisarenkodima@gmail.com>",
   "license": "MIT",
@@ -47,6 +51,7 @@
     "mocha": "3.0.2",
     "npm-run-all": "3.1.0",
     "nyc": "8.1.0",
+    "publish-latest": "1.1.2",
     "rimraf": "2.5.4",
     "semantic-release": "^4.3.5",
     "webpack": "1.13.2"
